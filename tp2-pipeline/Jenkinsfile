@@ -3,14 +3,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
-                    // Installer pandas
-                    bat '"F:\\python 3.12\\python.exe" -m pip install pandas'
-                    
-                    // Exécuter le script Python
-                    bat '"F:\\python 3.12\\python.exe" data_analysis.py'
+                dir('tp2-pipeline') { // Indique à Jenkins de se placer dans ce dossier
+                    script {
+                        // Installer pandas
+                        bat '"F:\\python 3.12\\python.exe" -m pip install pandas'
+
+                        // Exécuter le script Python
+                        bat '"F:\\python 3.12\\python.exe" data_analysis.py'
+                    }
                 }
             }
         }
     }
 }
+
