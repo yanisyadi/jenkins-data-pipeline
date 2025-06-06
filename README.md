@@ -14,3 +14,5 @@ Ce projet montre comment utiliser Jenkins pour exécuter automatiquement un scri
 ## Objectif
 
 Automatiser l'analyse de données avec Jenkins CI/CD.
+
+## Mise à jour automatique de Jenkins testée avec succès 🎉
