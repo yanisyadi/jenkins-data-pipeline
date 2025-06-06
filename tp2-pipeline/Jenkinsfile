@@ -4,9 +4,11 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Choisissez la commande en fonction de votre script
-                    bat 'pip install pandas' // Installer les dépendances
-                    bat'python data_analysis.py' // Exécuter le script Python
+                    // Installer pandas
+                    bat '"F:\\python 3.12\\python.exe" -m pip install pandas'
+                    
+                    // Exécuter le script Python
+                    bat '"F:\\python 3.12\\python.exe" data_analysis.py'
                 }
             }
         }
